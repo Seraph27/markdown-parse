@@ -1,3 +1,1 @@
-[[[[(((((((]]]]])))))))]]]]
-
-lmao bad brackets 
+[!test) (http://www.BadLink.com]

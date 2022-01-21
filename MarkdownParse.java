@@ -28,6 +28,10 @@ Maybe we can create an array that contains all possible image extensions. Iterat
 If it does we don't include it in our output if it doesn't we add it to our array list
 */
 
+/* Test Case 3
+Test Case 3 returns an incorrect password 
+*/
+
 public class MarkdownParse {
     static String[] imageExtensions = {".png", ".jpeg", ".gif", ".csv", ".jpg", ".svg", ".pdf"};
 
@@ -48,7 +52,7 @@ public class MarkdownParse {
             openParen = markdown.indexOf("(", nextCloseBracket);
             closeParen = markdown.indexOf(")", openParen);
 
-            if (!checkExtension(markdown.substring(openParen +1, closeParen)))
+            if (!checkExtension(markdown.substring(openParen +1, closeParen)) && openParen-nextCloseBracket==1)
             {
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
             }
