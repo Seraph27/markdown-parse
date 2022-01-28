@@ -1,1 +1,2 @@
-[this is not a link](picture.png) 
+[this is not a link](picture.png)
+[another link]()
