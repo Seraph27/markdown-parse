@@ -46,9 +46,14 @@ public class MarkdownParse {
             int openParen = markdown.indexOf("(", nextCloseBracket);
             int closeParen = markdown.indexOf(")", openParen);
 
+            // check bracket parity
+            if (nextOpenBracket == -1 || nextCloseBracket == -1){
+                break;
+            } 
+            if (openParen == -1 || closeParen == -1) break;
 
             if (nextCloseBracket > openParen) break;  
-            
+
             if (!checkExtension(markdown.substring(openParen +1, closeParen)) && openParen-nextCloseBracket==1)
             {
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
