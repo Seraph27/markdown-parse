@@ -27,13 +27,13 @@ public class MarkdownParseTest {
         assertEquals(MarkdownParse.getLinks(contents), List.of());
     }
 
-    @Test
-    public void testFile3() throws IOException {
-        Path fileName = Path.of("test-file3.md");
-        String contents = Files.readString(fileName);
+    // @Test
+    // public void testFile3() throws IOException {
+    //     Path fileName = Path.of("test-file3.md");
+    //     String contents = Files.readString(fileName);
 
-        assertEquals(MarkdownParse.getLinks(contents), List.of());
-    }
+    //     assertEquals(MarkdownParse.getLinks(contents), List.of());
+    // }
 
     @Test
     public void testFile4() throws IOException {
